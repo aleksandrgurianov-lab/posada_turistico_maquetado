@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full bg-[#1C1917]">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta | H⦂R Luxury Hotels</title>
+    <!-- Подключаем ваш локальный Tailwind -->
+    <link rel="stylesheet" href="./dist/output.css">
+    <style>
+        .glow-effect {
+            box-shadow: 0 4px 30px rgba(180, 83, 9, 0.2);
+        }
+    </style>
+</head>
+<body class="h-full font-sans antialiased text-stone-200 m-0 p-0 bg-[#1C1917]">
+
+    <!-- Кнопка переключения языков -->
+    <div class="absolute top-6 right-6 z-20">
+        <div class="relative inline-block text-left">
+            <button type="button" class="inline-flex items-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-medium text-stone-200 bg-[#2E2A24] border border-[#B45309]/40 hover:border-[#B45309] transition-colors cursor-pointer">
+                <span>ES</span>
+                <svg class="h-4 w-4 text-stone-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="flex min-h-screen">
+        
+        <!-- ЛЕВАЯ ПОЛОВИНА: Визуал -->
+        <div class="relative hidden w-0 flex-1 lg:block">
+            <img class="absolute inset-0 h-full w-full object-cover" 
+                 src="https://unsplash.com" 
+                 alt="Hotel Premium">
+            <div class="absolute inset-0 bg-[#1C1917]/50 backdrop-blur-[1px]"></div>
+            
+            <div class="absolute inset-0 flex flex-col justify-end p-12 text-white z-10">
+                <h1 class="text-4xl font-serif font-light tracking-wide leading-tight max-w-md mb-4">
+                    Encuentra tu próximo descanso.
+                </h1>
+                <p class="text-stone-300 text-xs tracking-wider uppercase font-light">
+                    Experiencias exclusivas & confort absoluto
+                </p>
+            </div>
+        </div>
+
+        <!-- ПРАВАЯ ПОЛОВИНА: Форма Регистрации -->
+        <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+            <div class="mx-auto w-full max-w-sm lg:w-96">
+                
+                <!-- Логотип и Заголовки -->
+                <div class="text-center lg:text-left">
+                    <div class="flex justify-center lg:justify-start mb-6">
+                        <span class="text-[#B45309] text-3xl font-serif tracking-widest font-bold">H⦂R</span>
+                    </div>
+                    
+                    <h2 class="text-3xl font-serif font-normal tracking-tight text-white">
+                        Crear una cuenta
+                    </h2>
+                    <p class="mt-2 text-sm text-stone-400 font-light">
+                        Regístrate para empezar a gestionar tus reservas.
+                    </p>
+                </div>
+
+                <!-- БЛОК С ФОРМОЙ -->
+                <div class="mt-8">
+                    <form action="#" method="POST" class="flex flex-col gap-5">
+                        
+                        <!-- Поле: Nombre -->
+                        <div>
+                            <label for="name" class="block text-xs font-medium tracking-wider text-stone-400 uppercase">Nombre Completo</label>
+                            <div class="mt-1.5">
+                                <input id="name" name="name" type="text" required placeholder="Juan Pérez"
+                                    class="block w-full rounded-md border border-[#B45309]/15 bg-[#2E2A24] px-3 py-2.5 text-white placeholder-stone-500 focus:border-[#B45309] focus:ring-1 focus:ring-[#B45309] focus:outline-none sm:text-sm transition-colors duration-200">
+                            </div>
+                        </div>
+
+                        <!-- Поле: Email -->
+                        <div>
+                            <label for="email" class="block text-xs font-medium tracking-wider text-stone-400 uppercase">Correo Electrónico</label>
+                            <div class="mt-1.5">
+                                <input id="email" name="email" type="email" required placeholder="correo@ejemplo.com"
+                                    class="block w-full rounded-md border border-[#B45309]/15 bg-[#2E2A24] px-3 py-2.5 text-white placeholder-stone-500 focus:border-[#B45309] focus:ring-1 focus:ring-[#B45309] focus:outline-none sm:text-sm transition-colors duration-200">
+                            </div>
+                        </div>
+
+                        <!-- Поле: Contraseña -->
+                        <div>
+                            <label for="password" class="block text-xs font-medium tracking-wider text-stone-400 uppercase">Contraseña</label>
+                            <div class="mt-1.5">
+                                <input id="password" name="password" type="password" required placeholder="••••••••"
+                                    class="block w-full rounded-md border border-[#B45309]/15 bg-[#2E2A24] px-3 py-2.5 text-white placeholder-stone-500 focus:border-[#B45309] focus:ring-1 focus:ring-[#B45309] focus:outline-none sm:text-sm transition-colors duration-200">
+                            </div>
+                        </div>
+
+                        <!-- Поле: Confirmar Contraseña -->
+                        <div>
+                            <label for="password_confirmation" class="block text-xs font-medium tracking-wider text-stone-400 uppercase">Confirmar Contraseña</label>
+                            <div class="mt-1.5">
+                                <input id="password_confirmation" name="password_confirmation" type="password" required placeholder="••••••••"
+                                    class="block w-full rounded-md border border-[#B45309]/15 bg-[#2E2A24] px-3 py-2.5 text-white placeholder-stone-500 focus:border-[#B45309] focus:ring-1 focus:ring-[#B45309] focus:outline-none sm:text-sm transition-colors duration-200">
+                            </div>
+                        </div>
+
+                        <!-- Главная кнопка -->
+                        <div class="pt-2">
+                            <button type="submit"
+                                class="glow-effect flex w-full justify-center rounded-md bg-[#B45309] px-3 py-2.5 text-sm font-medium tracking-wide text-white hover:bg-[#b45309]/90 transition-colors uppercase cursor-pointer">
+                                Registrarse
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Ссылка на Вход -->
+                <div class="mt-6 text-center">
+                    <p class="text-sm text-stone-400 font-light">
+                        <span>¿Ya tienes una cuenta?</span>
+                        <a href="./1_login.html" class="font-medium text-[#B45309] hover:text-[#B45309]/80 ml-1 underline transition-colors">
+                            Inicia sesión
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
