@@ -10,6 +10,8 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@tailwindcss/cli": "^4.3.0"
+    "@tailwindcss/cli": "^4.3.0",
+    "flatpickr": "^4.6.13",
+    "swiper": "^12.2.0"
   }
 }

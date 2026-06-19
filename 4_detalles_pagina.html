@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="es" class="h-full bg-[#1C1917]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión | Luxury Hotels</title>
+
+    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
+  </head>
+  <body
+    class="h-full font-sans antialiased text-stone-200 bg-[#1C1917] m-0 p-0"
+  >
+    <header class="bg-[#2e2a24] px-4 flex items-stretch justify-center">
+      <div
+        class="max-w-[1440px] w-full flex items-center md:items-stretch justify-between"
+      >
+        <!-- Навигация слева -->
+        <nav
+          class="hidden md:flex text-sm font-semibold tracking-wide flex items-center"
+        >
+          <a
+            href="#"
+            class="text-[#f97316] uppercase bg-stone-900 h-full flex items-center px-8"
+            >Inicio</a
+          >
+          <a
+            href="#"
+            class="text-[#a18875] uppercase hover:text-[#f97316] transition duration-300 h-full flex items-center px-8 hover:bg-stone-700"
+            >Mis Reservas</a
+          >
+        </nav>
+
+        <!-- Логотип по центру -->
+        <div class="flex justify-center py-2.5">
+          <img
+            src="./imagines_dist/logo.svg"
+            alt="Logo"
+            class="h-[60px] w-auto object-contain"
+          />
+        </div>
+
+        <!-- Профиль пользователя справа -->
+        <div class="hidden md:flex items-center gap-1">
+          <!-- <div class="absolute top-6 right-6 z-20"> -->
+          <div class="relative inline-block text-left">
+            <button
+              type="button"
+              class="inline-flex items-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-medium text-stone-200 bg-[#2E2A24] border border-[#B45309]/40 hover:border-[#B45309] transition-colors cursor-pointer"
+            >
+              <span>ES</span>
+              <svg
+                class="h-4 w-4 text-stone-400"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <!-- </div> -->
+          <div class="hidden md:flex items-center pl-4 gap-4">
+            <img
+              src="./imagines_dist/hotel_ejemplo/ava_2.png"
+              alt="Carlos Alberto"
+              class="w-[60px] h-[60px] rounded-full object-cover"
+            />
+            <div
+              class="text-left leading-tight flex-col flex justify-between h-full gap-1"
+            >
+              <span class="block text-sm font-medium text-[#ebd8c8]"
+                >Carlos Alberto</span
+              >
+              <div
+                class="text-[10px] uppercase tracking-wider text-[#78716c] space-x-1 flex items-center justify-between gap-x-1"
+              >
+                <a href="#" class="hover:underline">Mi Perfil</a>
+                <span>|</span>
+                <a
+                  href="#"
+                  class="hover:underline flex items-center gap-[8px] flex-row"
+                >
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.49992 6.37492L10.6249 8.49992L8.49992 10.6249M10.6249 8.49992H2.83325M2.83325 5.13393V5.10006C2.83325 4.30665 2.83325 3.90965 2.98766 3.60661C3.12348 3.34004 3.34004 3.12348 3.60661 2.98766C3.90965 2.83325 4.30665 2.83325 5.10006 2.83325H11.9001C12.6935 2.83325 13.0896 2.83325 13.3927 2.98766C13.6592 3.12348 13.8765 3.34004 14.0123 3.60661C14.1666 3.90935 14.1666 4.30587 14.1666 5.09773V11.9025C14.1666 12.6943 14.1666 13.0903 14.0123 13.393C13.8765 13.6596 13.6592 13.8765 13.3927 14.0123C13.0899 14.1666 12.694 14.1666 11.9021 14.1666H5.09773C4.30587 14.1666 3.90935 14.1666 3.60661 14.0123C3.34004 13.8765 3.12348 13.6593 2.98766 13.3928C2.83325 13.0898 2.83325 12.6933 2.83325 11.8999V11.8645"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span>Logout</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          id="burgerBtn"
+          class="flex md:hidden flex-col justify-center items-end w-8 h-8 space-y-1.5 focus:outline-none z-50 cursor-pointer"
+          aria-label="Menu"
+        >
+          <span
+            class="block w-6 h-0.5 bg-[#b45309] transition-transform duration-300 origin-center"
+            id="burgerLine1"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-[#b45309] transition-opacity duration-300"
+            id="burgerLine2"
+          ></span>
+          <span
+            class="block w-6 h-0.5 bg-[#b45309] transition-transform duration-300 origin-center"
+            id="burgerLine3"
+          ></span>
+        </button>
+
+        <div
+          id="mobileMenu"
+          class="absolute top-[80px] py-[40px] left-0 w-full bg-[#2e2a24] border-b border-[#332821] transition-all duration-300 ease-in-out opacity-0 pointer-events-none transform -translate-y-2 flex flex-col md:hidden z-30"
+        >
+          <a
+            href="#111"
+            class="text-[#f97316] uppercase bg-stone-900/60 py-4 px-6 border-l-4 border-[#f97316] font-semibold text-sm"
+            >Inicio</a
+          >
+          <a
+            href="#222"
+            class="text-[#a18875] uppercase hover:text-[#f97316] py-4 px-6 border-l-4 border-transparent font-semibold text-sm hover:bg-stone-700/40 transition-colors"
+            >Mis Reservas</a
+          >
+          <a
+            href="#333"
+            class="text-[#a18875] uppercase hover:text-[#f97316] py-4 px-6 border-l-4 border-transparent font-semibold text-sm hover:bg-stone-700/40 transition-colors"
+            >Mi Perfil</a
+          >
+
+          <!-- Ссылку выбора языка для мобилок можно продублировать прямо сюда -->
+          <div
+            class="flex md:hidden items-center justify-between gap-1 px-4 pt-[40px]"
+          >
+            <!-- <div class="absolute top-6 right-6 z-20"> -->
+
+            <!-- </div> -->
+            <div class="flex md:hidden items-center gap-4">
+              <img
+                src="./imagines_dist/hotel_ejemplo/ava_2.png"
+                alt="Carlos Alberto"
+                class="w-[60px] h-[60px] rounded-full object-cover"
+              />
+              <div
+                class="text-left leading-tight flex-col flex justify-between h-full gap-1"
+              >
+                <span class="block text-sm font-medium text-[#ebd8c8]"
+                  >Carlos Alberto</span
+                >
+                <div
+                  class="text-[10px] uppercase tracking-wider text-[#78716c] space-x-1 flex items-center justify-between gap-x-1"
+                >
+                  <a
+                    href="#444"
+                    class="hover:underline flex items-center gap-[8px] flex-row"
+                  >
+                    <svg
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8.49992 6.37492L10.6249 8.49992L8.49992 10.6249M10.6249 8.49992H2.83325M2.83325 5.13393V5.10006C2.83325 4.30665 2.83325 3.90965 2.98766 3.60661C3.12348 3.34004 3.34004 3.12348 3.60661 2.98766C3.90965 2.83325 4.30665 2.83325 5.10006 2.83325H11.9001C12.6935 2.83325 13.0896 2.83325 13.3927 2.98766C13.6592 3.12348 13.8765 3.34004 14.0123 3.60661C14.1666 3.90935 14.1666 4.30587 14.1666 5.09773V11.9025C14.1666 12.6943 14.1666 13.0903 14.0123 13.393C13.8765 13.6596 13.6592 13.8765 13.3927 14.0123C13.0899 14.1666 12.694 14.1666 11.9021 14.1666H5.09773C4.30587 14.1666 3.90935 14.1666 3.60661 14.0123C3.34004 13.8765 3.12348 13.6593 2.98766 13.3928C2.83325 13.0898 2.83325 12.6933 2.83325 11.8999V11.8645"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span>Logout</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative inline-block text-left">
+              <button
+                type="button"
+                class="inline-flex items-center gap-x-1.5 rounded-md px-3 py-2 text-sm font-medium text-stone-200 bg-[#2E2A24] border border-[#B45309]/40 hover:border-[#B45309] transition-colors cursor-pointer"
+              >
+                <span>ES</span>
+                <svg
+                  class="h-4 w-4 text-stone-400"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-5xl w-full mx-auto px-4 py-8 flex-grow max-w-[1440px]">
+      <nav
+        class="text-[11px] uppercase tracking-wider text-[#78716c] mb-6 space-x-2 font-medium pt-[40px]"
+      >
+        <a href="#" class="hover:text-[#f97316] transition-colors">Inicio</a>
+        <span>/</span>
+        <span class="text-[#b45309]">Palermo Luxury Loft</span>
+      </nav>
+
+      <div class="flex flex-col w-full lg:flex-row gap-12 pt-[80px]">
+        <div class="max-w-[100%] lg:max-w-[49%] gap-12">
+          <div class="swiper mainDetailSwiper mb-4">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./imagines_dist/hotel_ejemplo/panel_ultimo_hotel_image.png"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imagines_dist/hotel_ejemplo/panel_ultimo_hotel_image.png"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imagines_dist/hotel_ejemplo/panel_ultimo_hotel_image.png"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imagines_dist/hotel_ejemplo/panel_ultimo_hotel_image.png"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imagines_dist/hotel_ejemplo/panel_ultimo_hotel_image.png"
+                />
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+          <div thumbsSlider="" class="swiper thumbDetailSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="./imagines_dist/hotel_ejemplo/panel_ultimo_hotel_image.png"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imagines_dist/hotel_ejemplo/panel_ultimo_hotel_image.png"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imagines_dist/hotel_ejemplo/panel_ultimo_hotel_image.png"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imagines_dist/hotel_ejemplo/panel_ultimo_hotel_image.png"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="./imagines_dist/hotel_ejemplo/panel_ultimo_hotel_image.png"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full max-w-[100%] lg:max-w-[49%]">
+          <div class="w-full flex flex-col justify-between">
+            <div>
+              <div
+                class="flex flex-col justify-between items-start mb-4 flex-wrap sm:flex-nowrap gap-6 pb-6"
+              >
+                <h2
+                  class="text-[48px] text-[#fafaf9] font-secondary font-normal leading-[110%]"
+                >
+                  Palermo Luxury Loft
+                </h2>
+                <p
+                  class="text-[28px] text-[#6c6661] font-secondary font-normal leading-[110%]"
+                >
+                  ¿Qué hay en dentro?
+                </p>
+              </div>
+
+              <div class="flex flex-col gap-8">
+                <div class="flex flex-wrap gap-x-[40px] gap-y-[12px] w-full">
+                  <div
+                    class="sm:w-[calc(50%-20px)] flex items-center justify-start gap-[12px]"
+                  >
+                    <p
+                      class="font-main font-light text-[18px] text-[#78716c] capitalize leading-[110%]"
+                    >
+                      ciudad:
+                    </p>
+                    <p
+                      class="font-main font-light text-[18px] text-[#fafaf9] capitalize leading-[110%]"
+                    >
+                      Buenos Aires
+                    </p>
+                  </div>
+                  <div
+                    class="sm:w-[calc(50%-20px)] flex items-center justify-start gap-[12px]"
+                  >
+                    <p
+                      class="font-main font-light text-[18px] text-[#78716c] capitalize leading-[110%]"
+                    >
+                      Barrio:
+                    </p>
+                    <p
+                      class="font-main font-light text-[18px] text-[#fafaf9] capitalize leading-[110%]"
+                    >
+                      Palermo
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-x-[40px] gap-y-[12px] w-full">
+                  <div
+                    class="sm:w-[calc(50%-20px)] flex items-center justify-start gap-[12px]"
+                  >
+                    <p
+                      class="font-main font-light text-[18px] text-[#fafaf9] capitalize leading-[110%]"
+                    >
+                      🛏️ 1 Cama Grande
+                    </p>
+                  </div>
+                  <div
+                    class="sm:w-[calc(50%-20px)] flex items-center justify-start gap-[12px]"
+                  >
+                    <p
+                      class="font-main font-light text-[18px] text-[#fafaf9] capitalize leading-[110%]"
+                    >
+                      📶 Wi-Fi
+                    </p>
+                  </div>
+                  <div
+                    class="sm:w-[calc(50%-20px)] flex items-center justify-start gap-[12px]"
+                  >
+                    <p
+                      class="font-main font-light text-[18px] text-[#fafaf9] capitalize leading-[110%]"
+                    >
+                      ❄️ Aire Acondicionado
+                    </p>
+                  </div>
+                  <div
+                    class="sm:w-[calc(50%-20px)] flex items-center justify-start gap-[12px]"
+                  >
+                    <p
+                      class="font-main font-light text-[18px] text-[#fafaf9] capitalize leading-[110%]"
+                    >
+                      👥 3 personas
+                    </p>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-x-[40px] gap-y-[12px] w-full">
+                  <p
+                    class="font-main font-light text-[18px] text-[#fafaf9] capitalize leading-[110%]"
+                  >
+                    Hermoso departamento de lujo ubicado en el corazón de
+                    Palermo...Hermoso departamento de lujo ubicado en el corazón
+                    de Palermo...Hermoso departamento de lujo ubicado en el
+                    corazón de Palermo...Hermoso departamento de lujo ubicado en
+                    el corazón de Palermo...Hermoso departamento de lujo ubicado
+                    en el corazón de Palermo...Hermoso departamento de lujo
+                    ubicado en el corazón de Palermo...Hermoso departamento de
+                    lujo ubicado en el corazón de Palermo...
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-1 md:grid-cols-1  mb-8 mt-[48px] pb-[72px] border border-[#2e2a24] shadow-[0_-2px_36px_0px_rgba(180,83,9,0.3)] rounded-[12px] bg-[#27231f]"
+            >
+              <div
+                class="flex flex-col md:flex-row gap-[12px] items-center justify-between px-4 py-6"
+              >
+                <div class="flex gap-[12px] items-center justify-start">
+                  <div class="max-w-20">
+                    <img
+                      src="./imagines_dist/hotel_ejemplo/ava_1.png"
+                      alt="manager"
+                    />
+                  </div>
+                  <div
+                    class="flex items-start justify-start gap-[8px] flex-col"
+                  >
+                    <p
+                      class="font-main font-light text-[18px] text-[#fafaf9] capitalize leading-[110%]"
+                    >
+                      Isabella Sánchez
+                    </p>
+                    <p
+                      class="font-main font-light text-[18px] text-[#78716c] capitalize leading-[110%]"
+                    >
+                      admin/manager
+                    </p>
+                  </div>
+                </div>
+                <div class="text-right flex flex-col gap-1">
+                  <p
+                    class="text-[36px] text-[#fafaf9] font-secondary font-normal leading-[110%] lining-numbers"
+                  >
+                    $130
+                  </p>
+                  <span
+                    class="font-main block text-[14px] text-[#78716c] leading-[110%]"
+                    >por noche</span
+                  >
+                </div>
+              </div>
+
+              <form
+                action=""
+                class="flex flex-col gap-4 border-t border-b border-[#b45309] px-4 py-8 bg-[#1c1917]"
+              >
+                <div
+                  class="relative flex w-full gap-2 rounded-md border border-[#B45309]/15 bg-[#2E2A24] px-3 py-2.5 text-white sm:text-sm transition-colors duration-200 hover:border-[#B45309] focus-within:border-[#B45309] focus-within:ring-1 focus-within:ring-[#B45309]"
+                >
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M25.3333 8H6.66667C5.19391 8 4 9.19391 4 10.6667V25.3333C4 26.8061 5.19391 28 6.66667 28H25.3333C26.8061 28 28 26.8061 28 25.3333V10.6667C28 9.19391 26.8061 8 25.3333 8Z"
+                      stroke="#B45309"
+                    />
+                    <path
+                      d="M9.33301 8.5H22.667C23.938 8.5 24.8413 8.50067 25.5264 8.59277C26.1969 8.68296 26.5831 8.85265 26.8652 9.13477C27.1473 9.41687 27.317 9.80304 27.4072 10.4736C27.4868 11.0652 27.4973 11.8197 27.499 12.833H4.50098C4.50267 11.8197 4.51323 11.0652 4.59277 10.4736C4.68296 9.80304 4.85265 9.41687 5.13477 9.13477C5.41687 8.85265 5.80303 8.68296 6.47363 8.59277C7.15868 8.50067 8.06196 8.5 9.33301 8.5Z"
+                      stroke="#B45309"
+                    />
+                    <path
+                      d="M9.33325 4V8"
+                      stroke="#B45309"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M22.6667 4V8"
+                      stroke="#B45309"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+
+                  <input
+                    type="text"
+                    placeholder="Fecha de entrada y salida"
+                    class="bg-transparent text-sm w-full focus:outline-none placeholder-[#a18875]"
+                    id="rangeDatePicker"
+                    readonly
+                  />
+                </div>
+                <div
+                  class="relative flex w-full gap-2 rounded-md border border-[#B45309]/15 bg-[#2E2A24] px-3 py-2.5 text-white sm:text-sm transition-colors duration-200 hover:border-[#B45309] focus-within:border-[#B45309] focus-within:ring-1 focus-within:ring-[#B45309]"
+                >
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 7C16 9.76142 13.7614 12 11 12C8.23858 12 6 9.76142 6 7C6 4.23858 8.23858 2 11 2C13.7614 2 16 4.23858 16 7Z"
+                      fill="#B45309"
+                    />
+                    <path
+                      d="M6 16C2.6863 16 0 18.6863 0 22V30H16V16H6Z"
+                      fill="#B45309"
+                    />
+                    <path
+                      d="M26 16H20V30H32V22C32 18.6863 29.3138 16 26 16Z"
+                      fill="#B45309"
+                    />
+                    <path
+                      d="M24 12C26.2092 12 28 10.2091 28 8C28 5.79086 26.2092 4 24 4C21.7908 4 20 5.79086 20 8C20 10.2091 21.7908 12 24 12Z"
+                      fill="#B45309"
+                    />
+                  </svg>
+                  <input
+                    type="number"
+                    id="huespedes"
+                    name="huespedes"
+                    placeholder="Huespedes"
+                    class="bg-transparent text-sm w-full focus:outline-none placeholder-[#a18875]"
+                  />
+                </div>
+
+                <div
+                  class="flex flex-col md:flex-row items-stretch justify-between py-4 "
+                  id="calcContainer"
+                  data-price="130"
+                >
+                  <div class="flex flex-col items-start justify-between w-fit gap-2">
+                    <span
+                      class="font-main font-light text-[18px] text-[#fafaf9] capitalize leading-[110%]"
+                      >Las fechas seleccionadas están</span
+                    >
+                    <span
+                      id="statusText"
+                      class="font-main font-light text-[18px] text-[#fafaf9] capitalize leading-[110%] uppercase"
+                      >SELECCIONE FECHAS</span
+                    >
+                  </div>
+                  <div class="flex flex-col items-start justify-between w-fit gap-2">
+                    <span
+                      id="calcDetails"
+                      class="font-main font-light text-[18px] text-[#fafaf9] capitalize leading-[110%] w-full flex items-end gap-2 justify-end"
+                    >
+                      $<span id="basePrice">130</span> ×
+                      <span id="nightsCount">0</span> noches</span
+                    >
+                    <span
+                      class="flex gap-2"
+                      ><span
+                        class="font-main font-light text-[36px] text-[#fafaf9] capitalize leading-[110%] uppercase"
+                        >Total:</span
+                      ><span class="text-[36px] text-[#fafaf9] font-secondary font-normal leading-[110%] lining-numbers">$<span id="totalPrice">0</span></span></span
+                    >
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  id="reservar-btn"
+                  class="glow-effect flex w-full justify-center rounded-md bg-[#B45309] px-3 py-2.5 text-sm font-medium tracking-wide text-white hover:bg-[#b45309]/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B45309] transition-colors uppercase cursor-pointer min-h-[54px] items-center"
+                >
+                  <span>Reservar Ahora</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
+    <script src="./node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="./node_modules/flatpickr/dist/l10n/es.js"></script>
+
+    <script src="./src/index.js"></script>
+  </body>
+</html>
